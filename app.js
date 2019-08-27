@@ -1,8 +1,16 @@
 const buttons = document.querySelectorAll('button');
 const playnote = event => {
-    console.log (event.target.dataset.note);
+    const button = event.target;
+    const note = button.dataset.note;
+    const audioId = `audio${note}`;
+    console.log(audioId);
+    const audio = document.getElementById (audioId);
+    audio.pause();
+    audio.currentTime = 0;
+    audio.play();
+    
 }
 
 buttons.forEach(
-button => button.addEventListener('click' , alert ('hola crayola') )
+button => button.addEventListener('click', playnote )
 );
