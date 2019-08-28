@@ -28,10 +28,3 @@ const keyNoteDown = event =>{
 }
 
 document.addEventListener('keydown', keyNoteDown);
-const playnote = event => {
-    console.log (event.target.dataset.note);
-}
-
-buttons.forEach(
-button => button.addEventListener('click' , alert ('hola crayola') )
-);
